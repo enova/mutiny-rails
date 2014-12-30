@@ -1,4 +1,4 @@
-/*! Mutiny v0.3.1 - http://mutinyjs.com/ */
+/*! Mutiny v0.3.2 - http://mutinyjs.com/ */
 (function(window, undefined) {
 $(function(){
   if(Mutiny.options.initOnReady) {
@@ -23,7 +23,7 @@ var Mutiny = window.Mutiny = {
       if(isString(directives)) {
         /* data-mutiny='slider' */
         initWidget($e, directives, {});
-      } else if(typeof data === 'object') {
+      } else if(typeof directives === 'object') {
         /* data-mutiny='{"slider": {"some": "options"}}' */
         for(var directive in directives) {
           initWidget($e, directive, directives[directive]);
